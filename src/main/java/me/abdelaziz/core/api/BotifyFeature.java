@@ -2,7 +2,6 @@ package me.abdelaziz.core.api;
 
 import me.abdelaziz.core.builder.BotifyBot;
 
-@SuppressWarnings("unused")
 public abstract class BotifyFeature {
 
     private final String name, description;
@@ -24,23 +23,23 @@ public abstract class BotifyFeature {
 
     public void onBotRemove(final BotifyBot botifyBot) {}
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public double getPrice() {
+    public final double getPrice() {
         return price;
     }
 
-    public String getDescription() {
+    public final String getDescription() {
         return description;
     }
 
-    public double getHostingPrice() {
+    public final double getHostingPrice() {
         return hostingPrice;
     }
 
-    public double getTotalPrice() {
+    public final double getTotalPrice() {
         return price + hostingPrice;
     }
 }
