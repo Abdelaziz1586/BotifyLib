@@ -5,11 +5,12 @@ import me.abdelaziz.core.builder.BotifyBot;
 @SuppressWarnings("unused")
 public abstract class BotifyFeature {
 
-    private final String name, description;
     private final double price, hostingPrice;
+    private final String key, name, description;
 
-    public BotifyFeature(final String name, final String description, final double price, final double hostingPrice) {
-        this.name = name.replaceAll("[^a-zA-Z]", "").toLowerCase();
+    public BotifyFeature(final String key, final String name, final String description, final double price, final double hostingPrice) {
+        this.name = name;
+        this.key = key.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
         this.price = price;
         this.description = description;
@@ -24,7 +25,11 @@ public abstract class BotifyFeature {
 
     public void onBotRemove(final BotifyBot botifyBot) {}
 
-    public final String getName() {
+    public final String getKey() {
+        return key;
+    }
+
+    public String getName() {
         return name;
     }
 
