@@ -2,6 +2,7 @@ package me.abdelaziz.core.api;
 
 import me.abdelaziz.core.builder.BotifyBot;
 
+@SuppressWarnings("unused")
 public abstract class BotifyFeature {
 
     private final String name, description;
